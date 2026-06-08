@@ -7,11 +7,11 @@ export default function Header() {
     <header className={styles.header}>
       <Link href="/">
         <Image
-          src="/logo.svg"
-          alt="SIMPLE"
+          src="/LOGO.jpg"
+          alt="LLA株式会社"
           className={styles.logo}
-          width={348}
-          height={133}
+          width={696}
+          height={266}
           priority
         />
       </Link>
