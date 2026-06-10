@@ -1,5 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  basePath: '/blog',
+  images: {
+    unoptimized: true,
+  },
   async headers() {
     return [
       {
