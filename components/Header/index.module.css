@@ -27,20 +27,33 @@
 }
 
 .hpLink {
-  color: #374151;
+  background-color: #f3f4f6;
+  padding: 8px 20px; /* 左右の余白を少し広げる */
+  border-radius: 9999px;
+  color: #1f2937;
   text-decoration: none;
-  font-weight: 500;
+  font-weight: 600;
+  font-size: 14px;
+  white-space: nowrap; /* 文字が途中で改行されるのを防ぐ */
+  transition: background-color 0.2s;
+}
+
+.hpLink:hover {
+  background-color: #e5e7eb; /* マウスを乗せると少し濃くなる */
 }
 
 .instaLink {
-  color: #374151;
   display: flex;
   align-items: center;
+  transition: opacity 0.2s;
 }
 
-/* 巨大化していたInstagramのSVGアイコンサイズを24pxに固定 */
+.instaLink:hover {
+  opacity: 0.7; /* ホバー時に少し透明にする（リンク感が出る） */
+}
+
 .icon {
-  width: 24px;
-  height: 24px;
+  width: 50px;
+  height: 50px;
   display: block;
 }
