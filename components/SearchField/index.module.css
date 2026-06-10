@@ -6,11 +6,15 @@
   height: 40px;
   box-sizing: border-box;
   background: url('/search.svg') no-repeat 16px center;
+  
+  /* 🌟 1つ目の修正：PC画面での上の余白を追加 */
+  margin-top: 32px; 
 }
 
 @media (max-width: 640px) {
   .search {
     width: 100%;
-    margin: 0 24px;
+    /* 🌟 2つ目の修正：`0 24px` から変更して、スマホ画面でも上の余白（24px）を維持します */
+    margin: 24px 24px 0 24px; 
   }
 }

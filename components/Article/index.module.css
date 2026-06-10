@@ -1,14 +1,61 @@
 .main {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   align-items: center;
+  padding-top: 0px;
 }
 
+.titleArea {
+  width: 100%;
+  max-width: 960px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 24px;
+  padding: 0 16px;
+  box-sizing: border-box;
+}
+
+.backButton {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  padding: 0;
+  color: var(--color-text-sub);
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  transition: color 0.2s;
+}
+
+.backButton::before {
+  content: '←';
+  font-size: 1.1rem;
+  transition: transform 0.2s;
+}
+
+.backButton:hover {
+  color: #111827;
+}
+
+.backButton:hover::before {
+  transform: translateX(-3px);
+}
+/* ➕ 追加ここまで */
+
+/* 🛠️ 修正：元の .title をこのように書き換えます */
 .title {
   font-size: 2.4rem;
-  margin-bottom: 24px;
+  margin: 0; /* 🌟 変更：余白をリセット */
   text-align: center;
+  padding-right: 60px; /* 🌟 追記：右側のボタンと文字が重ならないための防護策 */
 }
 
 .description {
@@ -192,6 +239,12 @@
 }
 
 @media (max-width: 640px) {
+  /* 🔽 追加：スマホ画面のときはボタン左右の余白を少し狭くしてバランスを取ります */
+  .upperRow {
+    padding: 0 16px;
+    margin-bottom: 16px;
+  }
+
   .title {
     font-size: 2rem;
     margin-bottom: 20px;

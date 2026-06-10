@@ -1,8 +1,46 @@
 .header {
   padding: 16px 24px 8px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
 }
 
 .logo {
   height: 50px;
   width: auto;
+  display: block;
+}
+
+/* 🔽 縦並びと巨大化を解決するために、ここから下を追記してください */
+
+/* ロゴと右側のリンクを左右に横並びにする */
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* 右側のふたつのリンクを横並びにする */
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 24px; /* リンク間の余白 */
+}
+
+.hpLink {
+  color: #374151;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.instaLink {
+  color: #374151;
+  display: flex;
+  align-items: center;
+}
+
+/* 巨大化していたInstagramのSVGアイコンサイズを24pxに固定 */
+.icon {
+  width: 24px;
+  height: 24px;
+  display: block;
 }

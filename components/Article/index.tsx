@@ -1,3 +1,6 @@
+'use client';
+
+import { useRouter } from 'next/navigation';
 import { formatRichText } from '@/libs/utils';
 import { type Article } from '@/libs/microcms';
 import PublishedDate from '../Date';
@@ -10,11 +13,28 @@ type Props = {
 };
 
 export default function Article({ data }: Props) {
+  const router = useRouter();
+
   return (
     <main className={styles.main}>
-      <h1 className={styles.title}>{data.title}</h1>
+      {/* 🔽 変更：以前のupperRowを削除し、タイトルとボタンを囲む新しいエリアを定義 */}
+      <div className={styles.titleArea}>
+        <h1 className={styles.title}>{data.title}</h1>
+        <button 
+          type="button" 
+          onClick={() => router.back()} 
+          className={styles.backButton}
+        >
+          戻る
+        </button>
+      </div>
+      {/* 🔼 ここまで */}
+
       <TagList tags={data.tags} />
+      {/* 記述などはそのまま... */}
       <p className={styles.description}>{data.description}</p>
+      
+      {/* 以下の実装は変更なし */}
       <div className={styles.meta}>
         {data.writer && (
           <div className={styles.writer}>
