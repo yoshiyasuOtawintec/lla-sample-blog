@@ -1,9 +1,15 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  basePath: '/blog',
-  images: {
-    unoptimized: true,
-  },
+  // basePath: '/blog',
+  // images: {
+  //   unoptimized: true,
+  //   remotePatterns: [
+  //     {
+  //       protocol: 'https',
+  //       hostname: 'images.microcms-assets.io',
+  //     },
+  //   ],
+  // },
   async headers() {
     return [
       {
