@@ -6,7 +6,7 @@ export async function GET(request: Request) {
   const contentId = searchParams.get('contentId');
   const draftKey = searchParams.get('draftKey');
 
-  if (!contentId || !draftKey) {
+  if (!contentId) {
     return new Response('無効なパラメータです', { status: 400 });
   }
 
