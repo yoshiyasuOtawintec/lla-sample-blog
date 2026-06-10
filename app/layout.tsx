@@ -26,9 +26,9 @@ export const metadata = {
   alternates: {
     canonical: '/',
   },
-  icons: {
-    icon: '/favicon.ico',
-  },
+  // icons: {
+  //   icon: '/favicon.ico',
+  // },
 };
 
 type Props = {
