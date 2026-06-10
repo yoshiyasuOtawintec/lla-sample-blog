@@ -7,7 +7,7 @@ import './globals.css';
 import styles from './layout.module.css';
 
 export const metadata = {
-  metadataBase: new URL(process.env.BASE_URL || 'https://lla-sample-blog.vercel.app'),
+  metadataBase: new URL(process.env.BASE_URL || 'https://lla-official-blog.vercel.app'),
   title: {
     // 記事ページなどのタイトルテンプレート
     template: '%s | LLA株式会社公式ブログ',
