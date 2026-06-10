@@ -8,54 +8,55 @@
 .titleArea {
   width: 100%;
   max-width: 960px;
-  position: relative;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column; /* 縦並び */
+  align-items: center;    /* 全体を中央揃え */
   margin-bottom: 24px;
   padding: 0 16px;
   box-sizing: border-box;
 }
-
 .backButton {
-  position: absolute;
-  right: 16px;
-  top: 50%;
-  transform: translateY(-50%);
-  background: none;
-  border: none;
-  padding: 0;
-  color: var(--color-text-sub);
-  font-size: 0.9rem;
-  font-weight: 500;
+  /* 変更箇所: absolute配置を解除し、親要素(titleArea)のflex設定に従うようにします */
+  position: static;
+  align-self: flex-end; /* これでボタンだけが右端に寄ります */
+  margin-bottom: 8px;   /* タイトルとの余白 */
+  
+  /* 以下、デザイン設定 */
+  background-color: #f3f4f6;
+  padding: 8px 16px;
+  border-radius: 9999px;
+  border: 1px solid #e5e7eb;
+  color: #374151;
+  font-size: 0.85rem;
+  font-weight: 600;
   cursor: pointer;
   display: flex;
   align-items: center;
-  gap: 4px;
-  transition: color 0.2s;
-}
-
-.backButton::before {
-  content: '←';
-  font-size: 1.1rem;
-  transition: transform 0.2s;
+  gap: 6px;
+  transition: all 0.2s;
 }
 
 .backButton:hover {
-  color: #111827;
+  background-color: #e5e7eb;   /* ホバー時の色 */
+  border-color: #d1d5db;
+}
+
+/* 矢印のデザインを整える場合 */
+.backButton::before {
+  content: '←';
+  font-size: 1rem;
+  transition: transform 0.2s;
 }
 
 .backButton:hover::before {
   transform: translateX(-3px);
 }
-/* ➕ 追加ここまで */
 
-/* 🛠️ 修正：元の .title をこのように書き換えます */
 .title {
   font-size: 2.4rem;
-  margin: 0; /* 🌟 変更：余白をリセット */
+  margin: 0;
   text-align: center;
-  padding-right: 60px; /* 🌟 追記：右側のボタンと文字が重ならないための防護策 */
+  width: 100%;
 }
 
 .description {

@@ -23,7 +23,7 @@
 .nav {
   display: flex;
   align-items: center;
-  gap: 24px; /* リンク間の余白 */
+  gap: 0px;
 }
 
 .hpLink {

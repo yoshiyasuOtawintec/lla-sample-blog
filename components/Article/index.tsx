@@ -17,9 +17,8 @@ export default function Article({ data }: Props) {
 
   return (
     <main className={styles.main}>
-      {/* 🔽 変更：以前のupperRowを削除し、タイトルとボタンを囲む新しいエリアを定義 */}
       <div className={styles.titleArea}>
-        <h1 className={styles.title}>{data.title}</h1>
+        {/* タイトルの上に移動しました */}
         <button 
           type="button" 
           onClick={() => router.back()} 
@@ -27,14 +26,12 @@ export default function Article({ data }: Props) {
         >
           戻る
         </button>
+        <h1 className={styles.title}>{data.title}</h1>
       </div>
-      {/* 🔼 ここまで */}
 
       <TagList tags={data.tags} />
-      {/* 記述などはそのまま... */}
       <p className={styles.description}>{data.description}</p>
-      
-      {/* 以下の実装は変更なし */}
+    
       <div className={styles.meta}>
         {data.writer && (
           <div className={styles.writer}>

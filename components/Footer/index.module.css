@@ -1,6 +1,44 @@
 .footer {
-  padding: 16px 24px;
+  padding: 40px 24px;
   text-align: center;
   color: var(--color-text-main);
+  background-color: #f3f4f6; /* 背景色 */
+  border-top: 1px solid #e5e7eb;
+}
+
+.footerNav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+/* アイコンサイズをCSSで制御 */
+.footerIcon {
+  width: 50px;
+  height: 50px;
+  display: block;
+}
+
+/* ボタンのデザインをCSSで制御 */
+.footerHpLink {
+  padding: 10px 20px;
+  background-color: #ffffff;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  color: #374151;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.2s;
+}
+
+.footerHpLink:hover {
+  background-color: #e5e7eb;
+}
+
+.cr {
   font-size: 0.8rem;
+  color: #6b7280;
 }

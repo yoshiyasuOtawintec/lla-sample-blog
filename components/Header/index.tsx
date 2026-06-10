@@ -25,8 +25,10 @@ export default function Header() {
           <a
             href="https://lla-corp.com"
             className={styles.hpLink}
+            target="_blank"
+            rel="noopener noreferrer"
           >
-            LLA株式会社 公式サイト
+            LLA 公式サイト
           </a>
           <a
             href="https://www.instagram.com/lla_benriya/"
