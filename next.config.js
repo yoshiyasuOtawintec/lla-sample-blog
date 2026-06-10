@@ -13,7 +13,7 @@ const nextConfig = {
   async headers() {
     return [
       {
-        source: '/(.*)',
+        source: '/((?!favicon.ico|_next/static|_next/image|assets|images).*)',
         headers: [
           {
             key: 'CDN-Cache-Control',
